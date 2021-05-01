@@ -1,10 +1,11 @@
 import "./styles.css";
-/* import PropsInReact from "./props/propsInReact"; */
-import SecondProps from "./props/example_2";
+
+/* import SecondProps from "./propsInFunction/example_2"; */
+import InClass from "./propsInClass/example_1";
 export default function App() {
   return (
     <div className="App">
-      <SecondProps />
+      <InClass />
     </div>
   );
 }
