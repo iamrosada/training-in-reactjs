@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import Example from "./stateClassinComp/example";
+import Example from "./cicloOflife/exemple";
 export default function App() {
   return (
     <div className="App">
