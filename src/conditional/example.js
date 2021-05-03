@@ -1,10 +1,10 @@
 import { Component } from "react";
-
+import Examp from "./example_2";
 class Example extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comprovar: 1
+      comprovar: 2
     };
   }
 
@@ -12,7 +12,7 @@ class Example extends Component {
     return (
       <div>
         {this.state.comprovar === 1 && <h1> welcome...</h1>}
-        <div>bay</div>
+        <Examp />
       </div>
     );
   }
