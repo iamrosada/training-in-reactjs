@@ -3,13 +3,16 @@ import { Component } from "react";
 class Example extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      comprovar: 1
+    };
   }
 
   render() {
     return (
       <div>
-        <h1> Testing...</h1>
+        {this.state.comprovar === 1 && <h1> welcome...</h1>}
+        <div>bay</div>
       </div>
     );
   }
