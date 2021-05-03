@@ -5,7 +5,7 @@ class Example extends Component {
   render() {
     return (
       <div>
-        <Membro title="Working" />
+        <Membro title="Welcome" nome="Visitante" />
       </div>
     );
   }
