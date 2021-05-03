@@ -8,7 +8,9 @@ class Example extends Component {
       feed: [
         { id: 1, username: "Luis", curtdas: 10, comentarios: 2 },
         { id: 2, username: "Rosada", curtdas: 12, comentarios: 5 },
-        { id: 3, username: "Agua", curtdas: 212, comentarios: 125 }
+        { id: 3, username: "Agua", curtdas: 212, comentarios: 1 },
+        { id: 4, username: "Gama", curtdas: 1, comentarios: 125 },
+        { id: 5, username: "Silva", curtdas: 1, comentarios: 166 }
       ]
     };
   }
