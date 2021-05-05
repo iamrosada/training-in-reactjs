@@ -6,7 +6,7 @@ class Example extends Component {
     super(props);
     this.state = {
       feed: [
-        { id: 1, username: "Luis", curtdas: 10, comentarios: 2 },
+        { id: 1, username: "Luigs", curtdas: 10, comentarios: 2 },
         { id: 2, username: "Rosada", curtdas: 12, comentarios: 5 },
         { id: 3, username: "Agua", curtdas: 212, comentarios: 125 }
       ]
