@@ -4,8 +4,8 @@ class Formm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "l",
-      senha: "98709"
+      email: "",
+      senha: ""
     };
     this.Email = this.Email.bind(this);
     this.Senha = this.Senha.bind(this);
@@ -38,6 +38,8 @@ class Formm extends Component {
           placeholder="digita a senha"
           onChange={this.Senha}
         />
+        <h1>{this.state.email}</h1>
+        <h1>{this.state.senha}</h1>
       </div>
     );
   }
