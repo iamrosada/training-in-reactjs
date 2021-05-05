@@ -5,10 +5,12 @@ class Formm extends Component {
     super(props);
     this.state = {
       email: "",
-      senha: ""
+      senha: "",
+      sexo: "Masculino"
     };
     this.Email = this.Email.bind(this);
     this.Senha = this.Senha.bind(this);
+    this.trocaSexo = this.trocaSexo.bind(this);
   }
 
   Email(e) {
@@ -18,6 +20,10 @@ class Formm extends Component {
   Senha(e) {
     let valorDaSenha = e.target.value;
     this.setState({ senha: valorDaSenha });
+  }
+  trocaSexo(e) {
+    let troca = e.target.value;
+    this.setState({ sexo: troca });
   }
   render() {
     return (
@@ -38,8 +44,13 @@ class Formm extends Component {
           placeholder="digita a senha"
           onChange={this.Senha}
         />
+        <select name="sexo" value={this.state.sexo} onChange={this.trocaSexo}>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+        </select>
         <h1>{this.state.email}</h1>
         <h1>{this.state.senha}</h1>
+        <h1>{this.state.sexo}</h1>
       </div>
     );
   }
