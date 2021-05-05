@@ -22,6 +22,8 @@ class Example extends Component {
   }
   Cadastra(e) {
     e.preventDefault();
+    const { email, senha, nome } = this.state;
+    alert(`\nE-mail ${email}\n senha ${senha}\n Nome ${nome}\n`);
   }
   render() {
     return (
