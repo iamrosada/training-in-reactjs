@@ -1,0 +1,28 @@
+import React, { Component } from "react";
+//trabalho com api
+//https://sujeitoprogramador.com/rn-api/?api=posts
+class Requesition extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nutri: []
+    };
+  }
+  /*
+quando o componente e monatado */
+  componentDidMount() {
+    let url = "https://sujeitoprogramador.com/rn-api/?api=posts";
+    fetch(url)
+      .then((resposta) => resposta.json())
+      .then((json) => {
+        let state = this.state;
+        state.nutri = json;
+        this.setState(state);
+      });
+  }
+  render() {
+    return <div>ola</div>;
+  }
+}
+
+export default Requesition;
