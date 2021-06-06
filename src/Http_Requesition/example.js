@@ -21,7 +21,20 @@ quando o componente e monatado */
       });
   }
   render() {
-    return <div>ola</div>;
+    return (
+      <div className="conatainer">
+        {this.state.nutri.map((item) => {
+          return (
+            <article key={item.id}>
+              <strong>{item.titulo}</strong>
+              <img src={item.capa} />
+              <p>{item.subtitulo}</p>
+              <a className="botao">Acessar</a>
+            </article>
+          );
+        })}
+      </div>
+    );
   }
 }
 
