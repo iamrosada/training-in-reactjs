@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 //trabalho com api
+import "./example.css";
 //https://sujeitoprogramador.com/rn-api/?api=posts
 class Requesition extends Component {
   constructor(props) {
@@ -25,9 +26,9 @@ quando o componente e monatado */
       <div className="conatainer">
         {this.state.nutri.map((item) => {
           return (
-            <article key={item.id}>
+            <article key={item.id} className="post">
               <strong>{item.titulo}</strong>
-              <img src={item.capa} />
+              <img src={item.capa} alt="rosada" />
               <p>{item.subtitulo}</p>
               <a className="botao">Acessar</a>
             </article>
