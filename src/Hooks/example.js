@@ -4,12 +4,32 @@ import React, { useState, useEffect } from "react";
 tal como o componentDidMount
 */
 export default function Hookd() {
-  const [tarefas, setTarefas] = useState([
-    "Arumar a casa",
-    "Ir ao duch ",
-    "Comer Pão"
-  ]);
+  const [tarefas, setTarefas] = useState([]);
   const [input, setInput] = useState("");
+
+  /*como  o componentDidMount */
+
+  useEffect(() => {
+    const storageTarefas = localStorage.getItem("tarefas");
+
+    if (storageTarefas) {
+      setTarefas(JSON.parse(storageTarefas));
+    }
+  }, []);
+
+  /*como  o componentDidUpdated */
+  useEffect(
+    () => {
+      localStorage.setItem("tarefas", JSON.stringify(tarefas));
+    },
+
+    /*dentro desse array 
+  vai estar a funtion que vai ser monitorada
+  sempre que ela sofrer uma alteração a funtion above vai ser chamada
+   */ [
+      tarefas
+    ]
+  );
 
   //adiciona tarefas
   function handleTarefas() {
@@ -17,14 +37,6 @@ export default function Hookd() {
     setInput("");
   }
 
-  useEffect(
-    () => {},
-
-    /*dentro desse array 
-  vai estar a funtion que vai ser monitorada
-  sempre que ela sofrer uma alteração a funtion above vai ser chamada
-   */ []
-  );
   return (
     <div>
       <h2>Minhas Tarefas</h2>
