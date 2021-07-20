@@ -30,7 +30,7 @@ export default function Hookd() {
       tarefas
     ]
   );
-
+  const totalTarefas = useMemo(() => tarefas.length, [tarefas]);
   //adiciona tarefas
   function handleTarefas() {
     input.trim ? alert("input is empty") : setTarefas([...tarefas, input]);
@@ -40,7 +40,7 @@ export default function Hookd() {
 
   return (
     <div>
-      <h2>Minhas Tarefas Sao {tarefas.length}</h2>
+      <h2>Minhas Tarefas Sao {totalTarefas}</h2>
       <ul>
         {tarefas.map((tarefa) => (
           <li key={tarefa}>{tarefa}</li>
