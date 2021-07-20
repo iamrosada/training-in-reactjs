@@ -17,6 +17,7 @@ class Equipe extends Component {
     state.nome = "Rosada";
     this.setState(state);
   }
+
   deminuir() {
     let state_para_diminuir = this.state;
     state_para_diminuir.contador -= 1;

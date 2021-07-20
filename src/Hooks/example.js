@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
+/* a api do useEffect ela vem para substituir 
+tal como o componentDidMount
+*/
 export default function Hookd() {
   const [tarefas, setTarefas] = useState([
     "Arumar a casa",
@@ -13,6 +16,15 @@ export default function Hookd() {
     setTarefas([...tarefas, input]);
     setInput("");
   }
+
+  useEffect(
+    () => {},
+
+    /*dentro desse array 
+  vai estar a funtion que vai ser monitorada
+  sempre que ela sofrer uma alteração a funtion above vai ser chamada
+   */ []
+  );
   return (
     <div>
       <h2>Minhas Tarefas</h2>
