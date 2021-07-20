@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 /* a api do useEffect ela vem para substituir 
 tal como o componentDidMount
@@ -40,7 +40,7 @@ export default function Hookd() {
 
   return (
     <div>
-      <h2>Minhas Tarefas</h2>
+      <h2>Minhas Tarefas Sao {tarefas.length}</h2>
       <ul>
         {tarefas.map((tarefa) => (
           <li key={tarefa}>{tarefa}</li>
