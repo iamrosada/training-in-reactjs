@@ -33,7 +33,7 @@ export default function Hookd() {
   const totalTarefas = useMemo(() => tarefas.length, [tarefas]);
   //adiciona tarefas
   function handleTarefas() {
-    input.trim ? alert("input is empty") : setTarefas([...tarefas, input]);
+    !input.trim() ? alert("input is empty") : setTarefas([...tarefas, input]);
 
     setInput("");
   }
