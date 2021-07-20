@@ -33,7 +33,8 @@ export default function Hookd() {
 
   //adiciona tarefas
   function handleTarefas() {
-    setTarefas([...tarefas, input]);
+    input.trim ? alert("input is empty") : setTarefas([...tarefas, input]);
+
     setInput("");
   }
 
